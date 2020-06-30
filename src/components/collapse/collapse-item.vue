@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  props: ['collItem'],
+  props: {
+    collItem: {
+      required: true,
+      type: Object,
+    },
+  },
   methods: {
     toggleColl() {
       this.$emit('toggle-event', this.collItem.id);
