@@ -1,0 +1,83 @@
+.contacts {
+    .blinking-cursor {
+        opacity: 0;
+        font-size: 48px;
+        color: $color-light;
+    }
+    &.active .blinking-cursor {
+        animation: 1s blinking-cursor step-end infinite;
+        animation-delay: 2s;
+    }
+    @keyframes blinking-cursor {
+        from,
+        to {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    &__list {
+        margin: 15vh -20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin: 20px;
+        width: calc(100% - 40px);
+        min-height: 40px;
+        color: $color-light;
+        text-align: center;
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        ul>li {
+            margin: 40px 0;
+        }
+    }
+    &__link {
+        font-size: 32px;
+        color: $color-light;
+        transition: $transition-base;
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+    .social {
+        &__list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item {
+            position: relative;
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover .social__link {
+                color: $color-secondary;
+            }
+        }
+        &__link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: $color-light;
+            transition: $transition-base;
+            i {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.slide {
+    text-align: center;
+}
+
+.works {
+    &__link-box {
+        margin: 0 auto;
+        width: 60%;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &:hover {
+            .works__overlay {
+                opacity: 1;
+            }
+            .works__details {
+                top: 50%;
+                left: 50%;
+                opacity: 1;
+            }
+        }
+    }
+    &__title {
+        margin: 40px 0;
+        font-size: 30px;
+        font-weight: 300;
+        color: $color-light;
+        text-transform: uppercase;
+    }
+    &__details {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: $transition-base;
+        &-title {
+            color: $color-light;
+            text-transform: uppercase;
+        }
+        ul {
+            text-transform: uppercase;
+            padding: 20px 50px;
+            color: $color-light;
+            list-style: disc inside;
+            text-align: left;
+        }
+    }
+    &__overlay {
+        background-color: rgba($color-base, 0.8);
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        transition: $transition-base;
+    }
+}
