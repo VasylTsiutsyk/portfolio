@@ -22,7 +22,7 @@
             width: 100%;
             height: auto;
         }
-        &:hover {
+        @include hover-state {
             .works__overlay {
                 opacity: 1;
             }
@@ -40,11 +40,11 @@
         color: $color-light;
         text-transform: uppercase;
         @include respond-below(md) {
-            margin: 80px 0 20px 0;
+            margin: 50px 0 20px 0;
             font-size: 25px;
         }
         @include respond-below(sm) {
-            margin: 100px 0 20px 0;
+            margin: 60px 0 20px 0;
             font-size: 20px;
         }
     }

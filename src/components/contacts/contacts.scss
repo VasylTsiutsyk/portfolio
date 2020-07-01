@@ -30,8 +30,11 @@
         margin: 15vh -20px;
         display: flex;
         flex-wrap: wrap;
-        @include respond-below(xs) {
+        @include respond-below(sm) {
             margin: 10vh -20px;
+        }
+        @include respond-below(xs) {
+            margin: 5vh -20px;
         }
     }
     &__item {
