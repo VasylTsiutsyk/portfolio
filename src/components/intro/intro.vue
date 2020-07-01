@@ -1,8 +1,8 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="section__content">
-        <h2>welcome</h2>
+      <div class="intro__content">
+        <h2 class="intro__title">welcome</h2>
         <p class="type-text">
           <span
             v-for="(textItem, index) in textItems"
@@ -53,3 +53,7 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@import 'intro.scss';
+</style>

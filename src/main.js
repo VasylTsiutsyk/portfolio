@@ -3,11 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import VueFullPage from "vue-fullpage.js";
 import Collapse from "@/components/collapse/collapse";
+import Modernizr from "@/plugins/modernizr";
 import "./registerServiceWorker";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 
-
+Vue.use(Modernizr);
 Vue.use(VueFullPage);
 Vue.component("Collapse", Collapse);
 

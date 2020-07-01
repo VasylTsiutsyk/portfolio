@@ -9,6 +9,15 @@
         position: relative;
         text-align: center;
         overflow: hidden;
+        @include respond-below(md) {
+            width: 70%;
+        }
+        @include respond-below(sm) {
+            width: 80%;
+        }
+        @include respond-below(xs) {
+            width: 90%;
+        }
         img {
             width: 100%;
             height: auto;
@@ -30,6 +39,14 @@
         font-weight: 300;
         color: $color-light;
         text-transform: uppercase;
+        @include respond-below(md) {
+            margin: 80px 0 20px 0;
+            font-size: 25px;
+        }
+        @include respond-below(sm) {
+            margin: 100px 0 20px 0;
+            font-size: 20px;
+        }
     }
     &__details {
         position: absolute;

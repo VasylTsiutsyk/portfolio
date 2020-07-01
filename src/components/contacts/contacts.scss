@@ -3,6 +3,15 @@
         opacity: 0;
         font-size: 48px;
         color: $color-light;
+        @include respond-below(md) {
+            font-size: 40px;
+        }
+        @include respond-below(sm) {
+            font-size: 30px;
+        }
+        @include respond-below(xs) {
+            font-size: 25px;
+        }
     }
     &.active .blinking-cursor {
         animation: 1s blinking-cursor step-end infinite;
@@ -21,6 +30,9 @@
         margin: 15vh -20px;
         display: flex;
         flex-wrap: wrap;
+        @include respond-below(xs) {
+            margin: 10vh -20px;
+        }
     }
     &__item {
         margin: 20px;
@@ -41,8 +53,17 @@
         font-size: 32px;
         color: $color-light;
         transition: $transition-base;
-        &:hover {
+        @include hover-state {
             color: $color-secondary;
+        }
+        @include respond-below(md) {
+            font-size: 28px;
+        }
+        @include respond-below(sm) {
+            font-size: 24px;
+        }
+        @include respond-below(xs) {
+            font-size: 20px;
         }
     }
     .social {
@@ -50,6 +71,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @include respond-below(xs) {
+                flex-wrap: wrap;
+            }
         }
         &__item {
             position: relative;
@@ -60,8 +84,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            &:hover .social__link {
-                color: $color-secondary;
+            @include respond-below(xs) {
+                width: 35px;
+                height: 35px;
+            }
+            @include hover-state {
+                .social__link {
+                    color: $color-secondary;
+                }
             }
         }
         &__link {

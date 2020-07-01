@@ -1,6 +1,9 @@
 .collapse-section {
     margin: 80px 0;
     user-select: none;
+    @include respond-below(sm) {
+        margin: 50px 0;
+    }
     .collapse {
         &__item {
             margin: 10px 0;
@@ -21,6 +24,14 @@
             border-bottom: 6px solid $color-base;
             transition: $transition-base;
             cursor: pointer;
+            @include respond-below(sm) {
+                padding: 10px 0;
+                font-size: 30px;
+                border-bottom: 4px solid $color-base;
+            }
+            @include respond-below(xs) {
+                font-size: 20px;
+            }
             &:focus {
                 outline: none;
             }
@@ -31,14 +42,22 @@
             overflow: hidden;
             background-color: $color-light-grey;
             color: $color-light;
-            display: flex;
         }
         &__content {
             padding: 20px 50px;
             font-size: 18px;
             line-height: 150%;
             color: $color-base;
-            list-style: disc outside;
+            list-style: disc inside;
+            @include respond-below(sm) {
+                padding: 20px;
+                font-size: 16px;
+            }
+            @include respond-below(xs) {
+                padding: 10px;
+                font-size: 13px;
+                line-height: 130%;
+            }
             &-list {
                 list-style: inherit;
             }
@@ -62,7 +81,6 @@
     position: relative;
     width: 15px;
     height: 15px;
-    bottom: 0;
     &:before,
     &:after {
         content: '';

@@ -1,0 +1,51 @@
+.intro {
+    &__content {
+        width: 50vw;
+        margin: 100px auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        color: $color-light;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px rgba($color-light, 0.6);
+        @include respond-below(md) {
+            width: 60vw;
+            margin: 80px auto;
+        }
+        @include respond-below(sm) {
+            width: 70vw;
+            padding: 10px;
+        }
+        @include respond-below(xs) {
+            width: 80vw;
+        }
+        p {
+            font-size: 25px;
+            line-height: 150%;
+            @include respond-below(sm) {
+                font-size: 20px;
+            }
+            @include respond-below(xs) {
+                font-size: 14px;
+            }
+            span {
+                margin: 5px 0;
+            }
+        }
+    }
+    &__title {
+        margin: 20px 0;
+        font-size: 50px;
+        text-transform: uppercase;
+        @include respond-below(md) {
+            font-size: 45px;
+        }
+        @include respond-below(sm) {
+            font-size: 40px;
+        }
+        @include respond-below(xs) {
+            font-size: 35px;
+        }
+    }
+}
