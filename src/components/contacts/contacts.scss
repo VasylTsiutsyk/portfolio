@@ -27,7 +27,7 @@
         }
     }
     &__list {
-        margin: 15vh -20px;
+        margin: 15vh 0;
         display: flex;
         flex-wrap: wrap;
         @include respond-below(sm) {

@@ -69,6 +69,20 @@ export default {
           ],
         },
         {
+          title: 'main',
+          ref: 'https://vasyltsiutsyk.github.io/Main/dist/index.html',
+          src: 'main.jpg',
+          alt: 'Screenshot of "Main"',
+          techs: [
+            'html5',
+            'css3',
+            'js/parallax.js',
+            'gulp',
+            'swiper',
+            'svg animations',
+          ],
+        },
+        {
           title: 'text editor',
           ref: 'https://vasyltsiutsyk.github.io/JS_CW2/',
           src: 'txt-editor.jpg',
