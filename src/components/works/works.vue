@@ -52,7 +52,7 @@ export default {
           ref: 'https://vasyltsiutsyk.github.io/DREAMSHARE/',
           src: 'dreamshare.jpg',
           alt: 'Screenshot of home page "Dreamshare"',
-          techs: ['html5', 'css3'],
+          techs: ['html5', 'css3', 'js(scroll animation)'],
         },
         {
           title: 'crm',
