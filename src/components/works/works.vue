@@ -40,7 +40,7 @@ export default {
           alt: 'Screenshot of home page "Suffix"',
           techs: [
             'html5',
-            'css3/scss',
+            'css3/scss/bem',
             'vue.js/vuex',
             'axios',
             'i18n',
@@ -52,7 +52,7 @@ export default {
           ref: 'https://vasyltsiutsyk.github.io/DREAMSHARE/',
           src: 'dreamshare.jpg',
           alt: 'Screenshot of home page "Dreamshare"',
-          techs: ['html5', 'css3', 'js(scroll animation)'],
+          techs: ['html5', 'css3/scss/bem', 'js/es6 (scroll animation)'],
         },
         {
           title: 'crm',
@@ -61,7 +61,7 @@ export default {
           alt: 'Screenshot of home page "crm"',
           techs: [
             'html',
-            'css3',
+            'css3/bem',
             'vue.js/vuex',
             'vuelidate',
             'firebase',
@@ -75,8 +75,8 @@ export default {
           alt: 'Screenshot of "Main"',
           techs: [
             'html5',
-            'css3',
-            'js/parallax.js',
+            'css3/scss/bem',
+            'js/es6 (parallax.js)',
             'gulp',
             'swiper',
             'svg animations',
@@ -87,14 +87,14 @@ export default {
           ref: 'https://vasyltsiutsyk.github.io/JS_CW2/',
           src: 'txt-editor.jpg',
           alt: 'Screenshot of "Text editor"',
-          techs: ['html5', 'css3', 'js'],
+          techs: ['html5', 'css3', 'js/es6'],
         },
         {
           title: 'slider',
           ref: 'https://vasyltsiutsyk.github.io/slider/',
           src: 'slider.jpg',
           alt: 'Screenshot of "Slider"',
-          techs: ['html5', 'css3', 'js'],
+          techs: ['html5', 'css3', 'js/es6'],
         },
       ],
     };
