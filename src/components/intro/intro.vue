@@ -39,7 +39,7 @@ export default {
         },
         {
           order: 4,
-          text: '0.5 years of experience',
+          text: '1 year of experience',
         },
         {
           order: 5,

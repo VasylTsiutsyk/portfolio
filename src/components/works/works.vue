@@ -34,6 +34,19 @@ export default {
     return {
       works: [
         {
+          title: 'catering',
+          ref: 'https://vasyltsiutsyk.github.io/catering/',
+          src: 'catering.png',
+          alt: 'Screenshot of home page "Catering"',
+          techs: [
+            'html5',
+            'css3/scss/bem',
+            'adaptive design',
+            'js/es6+',
+            'swiper.js',
+          ],
+        },
+        {
           title: 'suffix',
           ref: 'https://ts-suffix.herokuapp.com/',
           src: 'suffix.jpg',
