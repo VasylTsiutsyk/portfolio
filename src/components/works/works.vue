@@ -47,7 +47,7 @@ export default {
           ],
         },
         {
-          title: 'cargoo',
+          title: 'cargo',
           ref: 'https://vasyltsiutsyk.github.io/cargo/dist/index.html',
           src: 'cargo.png',
           alt: 'Screenshot of home page "Cargo"',
