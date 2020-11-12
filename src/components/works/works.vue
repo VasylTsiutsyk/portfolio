@@ -47,6 +47,19 @@ export default {
           ],
         },
         {
+          title: 'cargoo',
+          ref: 'https://vasyltsiutsyk.github.io/cargo/dist/index.html',
+          src: 'cargo.png',
+          alt: 'Screenshot of home page "Cargo"',
+          techs: [
+            'html5',
+            'css3/scss/bem',
+            'adaptive design',
+            'js/es6+/scroll animation',
+            'swiper.js',
+          ],
+        },
+        {
           title: 'suffix',
           ref: 'https://ts-suffix.herokuapp.com/',
           src: 'suffix.jpg',
