@@ -48,7 +48,7 @@ export default {
         },
         {
           title: 'cargo',
-          ref: 'https://vasyltsiutsyk.github.io/cargo/dist/index.html',
+          ref: 'https://vasyltsiutsyk.github.io/cargo/dist/',
           src: 'cargo.png',
           alt: 'Screenshot of home page "Cargo"',
           techs: [
@@ -57,6 +57,18 @@ export default {
             'adaptive design',
             'js/es6+/scroll animation',
             'swiper.js',
+          ],
+        },
+        {
+          title: 'agseo',
+          ref: 'https://vasyltsiutsyk.github.io/agseo/dist/',
+          src: 'agseo.png',
+          alt: 'Screenshot of home page "AgSEO"',
+          techs: [
+            'html5',
+            'css3/scss/bem',
+            'adaptive design',
+            'jquery/fancybox',
           ],
         },
         {
