@@ -34,6 +34,18 @@ export default {
     return {
       works: [
         {
+          title: 'house cleaning',
+          ref: 'http://housecleaning.lime-agency.com.ua/',
+          src: 'crystalmaids.png',
+          alt: 'Screenshot of home page "House Cleaning - Crystalmaids"',
+          techs: [
+            'html5',
+            'css3/scss/bem',
+            'adaptive design',
+            'js/es6 (scroll animation)',
+          ],
+        },
+        {
           title: 'catering',
           ref: 'https://vasyltsiutsyk.github.io/catering/',
           src: 'catering.png',
@@ -61,7 +73,7 @@ export default {
         },
         {
           title: 'agseo',
-          ref: 'https://vasyltsiutsyk.github.io/agseo/dist/',
+          ref: 'https://agseosydney.com.au/',
           src: 'agseo.png',
           alt: 'Screenshot of home page "AgSEO"',
           techs: [
