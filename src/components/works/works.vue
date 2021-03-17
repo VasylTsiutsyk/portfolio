@@ -46,6 +46,19 @@ export default {
           ],
         },
         {
+          title: 'ccc',
+          ref: 'https://challengecollections.lime-agency.com.ua/',
+          src: 'ccc.png',
+          alt: 'Screenshot of home page "CCC"',
+          techs: [
+            'html5',
+            'css3/scss/bem',
+            'adaptive design',
+            'js/es6+',
+            'swiper.js',
+          ],
+        },
+        {
           title: 'catering',
           ref: 'https://vasyltsiutsyk.github.io/catering/',
           src: 'catering.png',
