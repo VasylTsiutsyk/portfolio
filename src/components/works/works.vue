@@ -59,6 +59,20 @@ export default {
           ],
         },
         {
+          title: 'fjord',
+          ref: 'https://vasyltsiutsyk.github.io/fjord/fjord/index.html',
+          src: 'fjord.png',
+          alt: 'Screenshot of home page "Fjord"',
+          techs: [
+            'html5',
+            'css3/scss/bem',
+            'adaptive design',
+            'js/es6+',
+            'swiper.js',
+            'scrollWatch.js',
+          ],
+        },
+        {
           title: 'catering',
           ref: 'https://vasyltsiutsyk.github.io/catering/',
           src: 'catering.png',
