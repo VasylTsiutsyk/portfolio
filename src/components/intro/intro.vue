@@ -1,5 +1,8 @@
 <template>
-  <section class="section">
+  <section class="section intro">
+    <div id="stars" class="stars-small"></div>
+    <div id="stars2" class="stars-medium"></div>
+    <div id="stars3" class="stars-big"></div>
     <div class="container">
       <div class="intro__content">
         <h2 class="intro__title">welcome</h2>

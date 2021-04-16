@@ -1,147 +1,146 @@
 @import './settings.scss';
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&display=swap');
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-family: $ff-base;
+  font-family: $ff-base;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
-
 
 /* global styles for fullpage*/
 
 #fp-nav ul li .fp-tooltip {
-    text-transform: uppercase;
-    @include respond-below(xs) {
-        font-size: 12px;
-    }
+  text-transform: uppercase;
+  @include respond-below(xs) {
+    font-size: 12px;
+  }
 }
 
 .fp-slidesNav.fp-bottom {
-    text-align: center;
-    bottom: 30px;
-    @include respond-below(xs) {
-        bottom: 20px;
-    }
+  text-align: center;
+  bottom: 30px;
+  @include respond-below(xs) {
+    bottom: 20px;
+  }
 }
 
 .fp-slidesNav.fp-bottom ul {
-    display: inline-block;
+  display: inline-block;
 }
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background-color: $color-dark-grey;
+  background-color: $color-dark-grey;
 }
 
 .container {
-    margin: 0 auto;
-    width: 90vw;
-    height: 100vh;
-    padding: 20px;
+  margin: 0 auto;
+  width: 90vw;
+  height: 100vh;
+  padding: 20px;
 }
 
 .section {
-    &__title {
-        margin-top: 50px;
-        font-size: 48px;
-        text-transform: capitalize;
-        &.tt-normal {
-            text-transform: initial;
-        }
-        @include respond-below(md) {
-            margin-top: 40px;
-            font-size: 40px;
-        }
-        @include respond-below(sm) {
-            margin-top: 30px;
-            font-size: 30px;
-        }
-        @include respond-below(xs) {
-            margin-top: 20px;
-            font-size: 25px;
-        }
+  &__title {
+    margin-top: 50px;
+    font-size: 48px;
+    text-transform: capitalize;
+    &.tt-normal {
+      text-transform: initial;
     }
-    .title--white {
-        color: $color-light;
+    @include respond-below(md) {
+      margin-top: 40px;
+      font-size: 40px;
     }
-    &__content {
-        width: 50vw;
-        margin: 100px auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        color: $color-light;
-        text-align: center;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 5px rgba($color-light, 0.6);
-        h2 {
-            margin: 20px 0;
-            font-size: 50px;
-            text-transform: uppercase;
-        }
-        p {
-            font-size: 25px;
-            line-height: 150%;
-            span {
-                margin: 5px 0;
-            }
-        }
+    @include respond-below(sm) {
+      margin-top: 30px;
+      font-size: 30px;
     }
-    /* title styles */
-    .type-text .line {
-        position: relative;
-        display: block;
-        overflow: hidden;
-        line-height: 1.2;
-        width: 100%;
+    @include respond-below(xs) {
+      margin-top: 20px;
+      font-size: 25px;
     }
-    &.active .type-text {
-        & .line::after,
-        & .line::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-        }
-        & .line::after {
-            background-color: $color-light;
-            animation: a-ltr-after 2s cubic-bezier(.77, 0, .18, 1) forwards;
-            transform: translateX(-101%);
-        }
-        & .line::before {
-            background-color: $color-base;
-            animation: a-ltr-before 2s cubic-bezier(.77, 0, .18, 1) forwards;
-            transform: translateX(0);
-        }
-        & .line::before,
-        & .line::after {
-            animation-delay: calc(var(--animation-order) * 100ms);
-        }
+  }
+  .title--white {
+    color: $color-light;
+  }
+  &__content {
+    width: 50vw;
+    margin: 100px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: $color-light;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba($color-light, 0.6);
+    h2 {
+      margin: 20px 0;
+      font-size: 50px;
+      text-transform: uppercase;
     }
-    @keyframes a-ltr-after {
-        0% {
-            transform: translateX(-100%)
-        }
-        100% {
-            transform: translateX(101%)
-        }
+    p {
+      font-size: 25px;
+      line-height: 150%;
+      span {
+        margin: 5px 0;
+      }
     }
-    @keyframes a-ltr-before {
-        0% {
-            transform: translateX(0)
-        }
-        100% {
-            transform: translateX(200%)
-        }
+  }
+  /* title styles */
+  .type-text .line {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    line-height: 1.2;
+    width: 100%;
+  }
+  &.active .type-text {
+    & .line::after,
+    & .line::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
+    & .line::after {
+      background-color: $color-light;
+      animation: a-ltr-after 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+      transform: translateX(-101%);
+    }
+    & .line::before {
+      background-color: $color-base;
+      animation: a-ltr-before 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+      transform: translateX(0);
+    }
+    & .line::before,
+    & .line::after {
+      animation-delay: calc(var(--animation-order) * 100ms);
+    }
+  }
+  @keyframes a-ltr-after {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(101%);
+    }
+  }
+  @keyframes a-ltr-before {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
 }

@@ -172,20 +172,6 @@ export default {
             'svg animations',
           ],
         },
-        {
-          title: 'text editor',
-          ref: 'https://vasyltsiutsyk.github.io/JS_CW2/',
-          src: 'txt-editor.jpg',
-          alt: 'Screenshot of "Text editor"',
-          techs: ['html5', 'css3', 'js/es6'],
-        },
-        {
-          title: 'slider',
-          ref: 'https://vasyltsiutsyk.github.io/slider/',
-          src: 'slider.jpg',
-          alt: 'Screenshot of "Slider"',
-          techs: ['html5', 'css3', 'js/es6'],
-        },
       ],
     };
   },

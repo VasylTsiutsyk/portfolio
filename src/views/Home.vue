@@ -28,7 +28,7 @@ export default {
         anchors: ['home', 'about', 'works', 'contacts'],
         controlArrows: false,
         slidesNavigation: true,
-        scrollingSpeed: 1200,
+        scrollingSpeed: 1000,
         verticalCentered: false,
         lockAnchors: true,
       },
