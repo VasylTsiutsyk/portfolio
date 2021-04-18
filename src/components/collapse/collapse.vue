@@ -27,7 +27,7 @@ export default {
             {
               id: 0,
               text:
-                "Hi! I'm beginning Frontend developer who has already created many interesting products using HTML/CSS/JS/Vue. And I want to work and grow in your company.",
+                "Hi! I'm Frontend developer who has already created many interesting products using HTML/CSS/JS/Vue. And I want to work and grow in your company.",
             },
             {
               id: 1,
@@ -75,7 +75,7 @@ export default {
             },
             {
               id: 6,
-              text: 'Gulp, pug, njk',
+              text: 'Gulp, pug, njk, liquid html',
             },
             {
               id: 7,
@@ -98,7 +98,7 @@ export default {
             {
               id: 2,
               text:
-                'LPNU/Master of Science/Fermentation and winemaking - sept 2019 - present',
+                'LPNU/Master of Science/Fermentation and winemaking - sept 2019 - dec 2020',
             },
             {
               id: 3,

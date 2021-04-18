@@ -1,103 +1,101 @@
 .collapse-section {
-    margin: 80px 0;
-    user-select: none;
-    @include respond-below(sm) {
-        margin: 50px 0;
+  margin: 50px 0;
+  user-select: none;
+  .collapse {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 20px 0;
+      background-color: $color-light;
+      color: $color-base;
+      font-size: 35px;
+      line-height: 1;
+      text-transform: capitalize;
+      border: none;
+      border-bottom: 6px solid $color-base;
+      transition: $transition-base;
+      cursor: pointer;
+      outline: none;
+      @include respond-below(sm) {
+        padding: 10px 0;
+        font-size: 30px;
+        border-bottom: 4px solid $color-base;
+      }
+      @include respond-below(xs) {
+        font-size: 20px;
+      }
     }
-    .collapse {
-        &__item {
-            margin: 10px 0;
+    &__content {
+      max-height: 500px;
+      padding: 20px 50px;
+      overflow: hidden;
+      background-color: $color-light-grey;
+      color: $color-light;
+      font-size: 18px;
+      color: $color-base;
+      transition: $transition-base;
+      @include respond-below(sm) {
+        padding: 20px;
+        font-size: 16px;
+      }
+      @include respond-below(xs) {
+        padding: 10px;
+        font-size: 13px;
+      }
+      ul {
+        list-style: disc inside;
+        li:not(:last-child) {
+          margin-bottom: 8px;
         }
-        &__header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 20px 0;
-            background-color: $color-light;
-            color: $color-base;
-            font-weight: bold;
-            font-size: 40px;
-            line-height: 100%;
-            text-transform: capitalize;
-            border: none;
-            border-bottom: 6px solid $color-base;
-            transition: $transition-base;
-            cursor: pointer;
-            @include respond-below(sm) {
-                padding: 10px 0;
-                font-size: 30px;
-                border-bottom: 4px solid $color-base;
-            }
-            @include respond-below(xs) {
-                font-size: 20px;
-            }
-            &:focus {
-                outline: none;
-            }
-        }
-        &__content-box {
-            max-height: 500px;
-            transition: $transition-base;
-            overflow: hidden;
-            background-color: $color-light-grey;
-            color: $color-light;
-        }
-        &__content {
-            padding: 20px 50px;
-            font-size: 18px;
-            line-height: 150%;
-            color: $color-base;
-            list-style: disc inside;
-            @include respond-below(sm) {
-                padding: 20px;
-                font-size: 16px;
-            }
-            @include respond-below(xs) {
-                padding: 10px;
-                font-size: 13px;
-                line-height: 130%;
-            }
-            &-list {
-                list-style: inherit;
-            }
-        }
+      }
     }
+  }
 }
 
-.is-closed .collapse__content-box {
-    max-height: 0;
+.is-closed .collapse__content {
+  max-height: 0;
+  padding: 0px 50px;
+  @include respond-below(sm) {
+    padding: 0 20px;
+  }
+  @include respond-below(xs) {
+    padding: 0 10px;
+  }
 }
 
-.is-active .icon {
+.is-active {
+  .icon {
     &:after {
-        transform: rotate(90deg);
-        opacity: 0;
+      transform: rotate(90deg);
+      opacity: 0;
     }
+  }
 }
 
 .icon {
-    display: block;
-    position: relative;
-    width: 15px;
-    height: 15px;
-    &:before,
-    &:after {
-        content: '';
-        position: absolute;
-        background-color: $color-base;
-        transition: $transition-base;
-    }
-    &:before {
-        top: 6px;
-        left: 0;
-        right: 0;
-        height: 3px;
-    }
-    &:after {
-        top: 0;
-        left: 6px;
-        bottom: 0;
-        width: 3px;
-    }
+  display: block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: $color-base;
+    transition: $transition-base;
+  }
+  &:before {
+    top: 6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+  &:after {
+    top: 0;
+    left: 6px;
+    bottom: 0;
+    width: 3px;
+  }
 }

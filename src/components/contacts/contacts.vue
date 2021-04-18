@@ -19,7 +19,7 @@
             </ul>
           </li>
 
-          <li class="contacts__item">
+          <li class="contacts__item social">
             <ul class="social__list">
               <li
                 class="social__item"

@@ -1,116 +1,110 @@
 .contacts {
-    .blinking-cursor {
-        opacity: 0;
-        font-size: 48px;
-        color: $color-light;
-        @include respond-below(md) {
-            font-size: 40px;
-        }
-        @include respond-below(sm) {
-            font-size: 30px;
-        }
-        @include respond-below(xs) {
-            font-size: 25px;
-        }
+  .blinking-cursor {
+    opacity: 0;
+    font-size: 48px;
+    color: $color-light;
+    @include respond-below(md) {
+      font-size: 40px;
     }
-    &.active .blinking-cursor {
-        animation: 1s blinking-cursor step-end infinite;
-        animation-delay: 2s;
+    @include respond-below(sm) {
+      font-size: 30px;
     }
-    @keyframes blinking-cursor {
-        from,
-        to {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
+    @include respond-below(xs) {
+      font-size: 25px;
     }
+  }
+  &.active .blinking-cursor {
+    animation: 1s blinking-cursor step-end infinite;
+    animation-delay: 2s;
+  }
+  @keyframes blinking-cursor {
+    from,
+    to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  &__list {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 100%;
+    color: $color-light;
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    ul > li {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__link {
+    font-size: 32px;
+    color: $color-light;
+    transition: $transition-base;
+    @include hover-state {
+      color: $color-secondary;
+    }
+    @include respond-below(md) {
+      font-size: 28px;
+    }
+    @include respond-below(sm) {
+      font-size: 24px;
+    }
+    @include respond-below(xs) {
+      font-size: 20px;
+    }
+  }
+  .social {
     &__list {
-        margin: 15vh 0;
-        display: flex;
+      margin: -5px -10px;
+      display: flex;
+      justify-content: center;
+      @include respond-below(xs) {
         flex-wrap: wrap;
-        @include respond-below(sm) {
-            margin: 10vh -20px;
-        }
-        @include respond-below(xs) {
-            margin: 5vh -20px;
-        }
+      }
     }
     &__item {
-        margin: 20px;
-        width: calc(100% - 40px);
-        min-height: 40px;
-        color: $color-light;
-        text-align: center;
-        h3 {
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: uppercase;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      margin: 5px 10px;
+      border-radius: 50%;
+      @include respond-below(xs) {
+        width: 35px;
+        height: 35px;
+      }
+      @include hover-state {
+        .social__link {
+          color: $color-secondary;
         }
-        ul>li {
-            margin: 40px 0;
-        }
+      }
     }
     &__link {
-        font-size: 32px;
-        color: $color-light;
-        transition: $transition-base;
-        @include hover-state {
-            color: $color-secondary;
-        }
-        @include respond-below(md) {
-            font-size: 28px;
-        }
-        @include respond-below(sm) {
-            font-size: 24px;
-        }
-        @include respond-below(xs) {
-            font-size: 20px;
-        }
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: $color-light;
+      transition: $transition-base;
+      i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
-    .social {
-        &__list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @include respond-below(xs) {
-                flex-wrap: wrap;
-            }
-        }
-        &__item {
-            position: relative;
-            margin: 10px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @include respond-below(xs) {
-                width: 35px;
-                height: 35px;
-            }
-            @include hover-state {
-                .social__link {
-                    color: $color-secondary;
-                }
-            }
-        }
-        &__link {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            color: $color-light;
-            transition: $transition-base;
-            i {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-    }
+  }
 }

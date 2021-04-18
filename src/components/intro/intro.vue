@@ -12,8 +12,9 @@
             :key="index"
             class="line"
             :style="{ '--animation-order': textItem.order }"
-            >{{ textItem.text }}</span
           >
+            {{ textItem.text }}
+          </span>
         </p>
       </div>
       <ScrollDownIndicator />
@@ -34,7 +35,7 @@ export default {
         },
         {
           order: 2,
-          text: 'born in ukraine, living in lviv',
+          text: 'born in ukraine, based in lviv',
         },
         {
           order: 3,

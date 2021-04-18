@@ -4,18 +4,16 @@
       {{ collItem.title }}
       <span class="icon"></span>
     </button>
-    <div class="collapse__content-box">
-      <div class="collapse__content">
-        <ul class="collapse__content-list">
-          <li
-            v-for="(item, index) in collItem.content"
-            :key="index"
-            class="collapse__content-item"
-          >
-            {{ item.text }}
-          </li>
-        </ul>
-      </div>
+    <div class="collapse__content">
+      <ul>
+        <li
+          v-for="(item, index) in collItem.content"
+          :key="index"
+          class="collapse__content-item"
+        >
+          {{ item.text }}
+        </li>
+      </ul>
     </div>
   </li>
 </template>
