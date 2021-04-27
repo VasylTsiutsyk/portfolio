@@ -25,6 +25,7 @@
       justify-content: space-between;
       font-size: 25px;
       font-weight: 100;
+      letter-spacing: 3px;
       @include respond-below(sm) {
         font-size: 20px;
       }
@@ -33,7 +34,7 @@
       }
       span {
         &:not(:last-child) {
-          margin-bottom: 12px;
+          margin-bottom: 15px;
         }
       }
     }
@@ -51,6 +52,12 @@
     }
     @include respond-below(xs) {
       font-size: 35px;
+    }
+    &::before{
+      content: '<';
+    }
+    &::after{
+      content: '>';
     }
   }
 

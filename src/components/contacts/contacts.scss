@@ -1,21 +1,10 @@
 .contacts {
   .blinking-cursor {
     opacity: 0;
-    font-size: 48px;
-    color: $color-light;
-    @include respond-below(md) {
-      font-size: 40px;
-    }
-    @include respond-below(sm) {
-      font-size: 30px;
-    }
-    @include respond-below(xs) {
-      font-size: 25px;
-    }
+    font-size: inherit;
   }
   &.active .blinking-cursor {
-    animation: 1s blinking-cursor step-end infinite;
-    animation-delay: 2s;
+    animation: 1s blinking-cursor 1.4s step-end infinite;
   }
   @keyframes blinking-cursor {
     from,

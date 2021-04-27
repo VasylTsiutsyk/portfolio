@@ -8,16 +8,15 @@
       align-items: center;
       width: 100%;
       padding: 20px 0;
+      border: none;
+      border-bottom: 6px solid $color-base;
       background-color: $color-light;
       color: $color-base;
       font-size: 35px;
-      line-height: 1;
       text-transform: capitalize;
-      border: none;
-      border-bottom: 6px solid $color-base;
-      transition: $transition-base;
       cursor: pointer;
       outline: none;
+      transition: $transition-base;
       @include respond-below(sm) {
         padding: 10px 0;
         font-size: 30px;
@@ -30,11 +29,10 @@
     &__content {
       max-height: 500px;
       padding: 20px 50px;
-      overflow: hidden;
-      background-color: $color-light-grey;
-      color: $color-light;
-      font-size: 18px;
       color: $color-base;
+      background-color: $color-light-grey;
+      font-size: 18px;
+      overflow: hidden;
       transition: $transition-base;
       @include respond-below(sm) {
         padding: 20px;

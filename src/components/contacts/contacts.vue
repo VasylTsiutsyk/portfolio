@@ -2,9 +2,7 @@
   <section class="section contacts">
     <div class="container">
       <h2 class="section__title title--white tt-normal type-text">
-        <span class="line"
-          >Let`s connect <span class="blinking-cursor">|</span></span
-        >
+        <span class="line">Let`s connect <span class="blinking-cursor">|</span></span>
       </h2>
       <nav class="contacts__nav">
         <ul class="contacts__list">
