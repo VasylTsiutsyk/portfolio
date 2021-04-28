@@ -9,7 +9,6 @@
             class="works__link"
             :href="work.ref"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <div class="works__overlay"></div>
             <img :src="'/img/' + work.src" :alt="work.alt" />
@@ -35,7 +34,7 @@ export default {
       works: [
         {
           title: 'house cleaning',
-          ref: 'http://housecleaning.lime-agency.com.ua/',
+          ref: 'http://housecleaning.lime-agency.com.ua',
           src: 'crystalmaids.png',
           alt: 'Screenshot of home page "House Cleaning - Crystalmaids"',
           techs: [
@@ -46,10 +45,10 @@ export default {
           ],
         },
         {
-          title: 'ccc',
-          ref: 'https://challengecollections.lime-agency.com.ua/',
-          src: 'ccc.png',
-          alt: 'Screenshot of home page "CCC"',
+          title: 'Aplpha Omega Video',
+          ref: 'https://alphaomegavideo.lime-agency.com.ua',
+          src: 'aov.png',
+          alt: 'Screenshot of home page "Aplpha Omega Video"',
           techs: [
             'html5',
             'css3/scss/bem',
@@ -59,10 +58,23 @@ export default {
           ],
         },
         {
-          title: 'Aplpha Omega Video',
-          ref: 'https://alphaomegavideo.lime-agency.com.ua/',
-          src: 'aov.png',
-          alt: 'Screenshot of home page "Aplpha Omega Video"',
+          title: 'musicok',
+          ref: 'http://musikok.lime-agency.com.ua',
+          src: 'musicok.png',
+          alt: 'Screenshot of home page "musicok"',
+          techs: [
+            'html5',
+            'css3/scss/bem',
+            'adaptive design',
+            'js/es6+/gulp.js',
+            'swiper.js, wow.js, animate.css',
+          ],
+        },
+        {
+          title: 'ccc',
+          ref: 'https://challengecollections.lime-agency.com.ua',
+          src: 'ccc.png',
+          alt: 'Screenshot of home page "CCC"',
           techs: [
             'html5',
             'css3/scss/bem',
@@ -87,7 +99,7 @@ export default {
         },
         {
           title: 'catering',
-          ref: 'https://vasyltsiutsyk.github.io/catering/',
+          ref: 'https://vasyltsiutsyk.github.io/catering',
           src: 'catering.png',
           alt: 'Screenshot of home page "Catering"',
           techs: [
@@ -100,7 +112,7 @@ export default {
         },
         {
           title: 'cargo',
-          ref: 'https://vasyltsiutsyk.github.io/cargo/dist/',
+          ref: 'https://vasyltsiutsyk.github.io/cargo/dist',
           src: 'cargo.png',
           alt: 'Screenshot of home page "Cargo"',
           techs: [
@@ -113,7 +125,7 @@ export default {
         },
         {
           title: 'agseo',
-          ref: 'https://agseosydney.com.au/',
+          ref: 'https://agseosydney.com.au',
           src: 'agseo.png',
           alt: 'Screenshot of home page "AgSEO"',
           techs: [
@@ -125,7 +137,7 @@ export default {
         },
         {
           title: 'suffix',
-          ref: 'https://ts-suffix.herokuapp.com/',
+          ref: 'https://ts-suffix.herokuapp.com',
           src: 'suffix.jpg',
           alt: 'Screenshot of home page "Suffix"',
           techs: [
@@ -139,7 +151,7 @@ export default {
         },
         {
           title: 'dreamshare',
-          ref: 'https://vasyltsiutsyk.github.io/DREAMSHARE/',
+          ref: 'https://vasyltsiutsyk.github.io/DREAMSHARE',
           src: 'dreamshare.jpg',
           alt: 'Screenshot of home page "Dreamshare"',
           techs: ['html5', 'css3/scss/bem', 'js/es6 (scroll animation)'],
