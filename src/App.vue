@@ -48,6 +48,8 @@ export default {
 @import '@/assets/style/base/functions';
 
 .app {
+  overflow-x: hidden;
+  min-height: 100vh;
   background-color: $color-green-dark;
   color: $color-white;
 

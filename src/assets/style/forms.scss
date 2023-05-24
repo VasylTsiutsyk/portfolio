@@ -45,7 +45,63 @@
   }
 }
 
-/* Toggle */
+// ========== INPUTS ========== //
+.input {
+  input,
+  textarea {
+    appearance: none;
+    outline: none;
+    border: rem(1) solid rgba($color-black, 0.2);
+    border-radius: rem(3);
+    width: 100%;
+    padding: rem(6) rem(11);
+    background: none;
+    font-size: rem(14);
+    line-height: 1.4285;
+    color: $color-black;
+    resize: none;
+    transition: $transition-primary;
+
+    @include hover {
+      border-color: $color-primary;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $color-primary;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}
+
+// File Input
+.file-input {
+  position: relative;
+  display: block;
+  border: rem(2) dashed rgba($color-black, 0.1);
+  border-radius: rem(3);
+  height: rem(120);
+
+  input {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+}
+
+// Toggle Input
 .toggle {
   position: relative;
   display: inline-flex;
@@ -102,45 +158,6 @@
     font-size: rem(14);
     font-weight: 400;
     transition: color $transition-duration-primary;
-  }
-}
-
-// ========== INPUTS ========== //
-.input {
-  input,
-  textarea {
-    appearance: none;
-    outline: none;
-    border: rem(1) solid rgba($color-black, 0.2);
-    border-radius: rem(3);
-    width: 100%;
-    padding: rem(6) rem(11);
-    background: none;
-    font-size: rem(14);
-    line-height: 1.4285;
-    color: $color-black;
-    resize: none;
-    transition: $transition-primary;
-
-    @include hover {
-      border-color: $color-primary;
-    }
-
-    &:focus,
-    &:active {
-      border-color: $color-primary;
-    }
-
-    &::-webkit-search-decoration,
-    &::-webkit-search-cancel-button,
-    &::-webkit-search-results-button,
-    &::-webkit-search-results-decoration {
-      display: none;
-    }
-
-    &::placeholder {
-      color: inherit;
-    }
   }
 }
 

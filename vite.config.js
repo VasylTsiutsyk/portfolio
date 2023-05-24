@@ -12,7 +12,8 @@ export default ({ mode }) => {
     plugins: [
       vue2(),
       stylelint({
-        // fix: true,
+        fix: true,
+        cache: false,
       }),
       inspect(),
     ],

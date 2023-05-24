@@ -483,16 +483,12 @@ module.exports = {
     'selector-class-pattern': null,
     'value-no-vendor-prefix': null,
     'rule-empty-line-before': ['always', { ignore: ['after-comment', 'first-nested'] }],
-  },
-  indentation: {
-    default: 1, // e.g. "1" tab or "2" spaces
-    char: '\t', // probably better to have a keyword here e.g. "tab"|"space"
-
-    block: true, // indent blocks by the default amount and char.
-    'rule-set-by-selector-class-bem-element': true, // same with bem elements
-    'rule-set-by-selector-class-bem-modifier': false, // not with bem modifers
-    'rule-set-by-selector-pseudo-classes': 2, // indent with 2 of the char e.g. tabs
-    'rule-set-by-selector-pseudo-element': true, // default amount and char
+    indentation: [
+      2,
+      {
+        baseIndentLevel: 0,
+      },
+    ],
   },
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
   overrides: [
