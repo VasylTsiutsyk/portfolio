@@ -1,0 +1,53 @@
+// general
+$browser-context: 16;
+
+// container settings
+$mar: 10;
+$items: 12;
+$content-width: 100%;
+$content-width-lg: 1580;
+$container: $content-width + 2 * $mar;
+$container-lg: $content-width-lg + 2 * $mar;
+
+// fonts
+$font-family-primary: 'Roboto', sans-serif;
+$font-family-secondary: 'Arial', sans-serif;
+$font-size-primary: 1rem;
+$font-weight-primary: 400;
+$body-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// colors
+$color-black: #000;
+$color-white: #fff;
+$color-grey: #c8c8c8;
+$color-green: #627B7A;
+$color-green-dark: #2C3D39;
+$color-green-bright: #7AB10E;
+$color-blue: #418AF2;
+$color-blue-dark: #418AF2;
+$color-red: #E61610;
+$color-primary: $color-green;
+
+// transitions
+$transition-duration-primary: 0.35s;
+$transition-primary: all $transition-duration-primary ease;
+
+// borders
+$border-radius-primary: 0.25rem;
+
+// box-shadows
+$box-shadow-primary: 0 0 1rem rgba($color-primary, 0.25);
+
+// breakpoints map
+$breakpoints: (
+  xxs: 320px,
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1280px,
+  xl: 1440px,
+  xxl: 1560px,
+);
+
+$sidebar-width: 2.5rem;

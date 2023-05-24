@@ -1,0 +1,25 @@
+// ========== HEADER ========== //
+.header {
+  &__wrap {
+    padding: rem(24) 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+
+    @include respond-below(xs) {
+      flex: 0 0 100%;
+    }
+  }
+}
