@@ -1,44 +1,31 @@
 <template>
-  <div id="app" class="app" :class="{ 'app--light': isThemeLight }">
-    <aside class="aside">
-      <router-link :to="{ name: routeNames.designs.index }" class="aside__logo">
-        <img src="@/assets/images/logo.svg" alt="" />
-      </router-link>
-    </aside>
-
-    <router-view />
+  <div id="app" class="app">
+    <default-layout />
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
-import { routeNames } from '@/constants';
+import DefaultLayout from '@/layouts/default/default.layout.vue';
 
 export default {
   name: 'App',
-  data() {
+  metaInfo() {
     return {
-      routeNames,
-      theme: null,
+      title: this.pageTitle,
+      titleTemplate: '%s - App',
+      htmlAttrs: {
+        lang: 'en',
+        amp: true,
+      },
     };
   },
+  components: {
+    DefaultLayout,
+  },
   computed: {
-    isThemeLight() {
-      return this.theme === 'light';
+    pageTitle() {
+      return this.$route.meta.title || 'Title';
     },
-  },
-  watch: {
-    '$route.meta.theme': {
-      handler(value) {
-        this.theme = value;
-      },
-    },
-  },
-  created() {
-    this.fetchDesigns();
-  },
-  methods: {
-    ...mapActions(['fetchDesigns']),
   },
 };
 </script>
@@ -50,12 +37,5 @@ export default {
 .app {
   overflow-x: hidden;
   min-height: 100vh;
-  background-color: $color-green-dark;
-  color: $color-white;
-
-  &--light {
-    background-color: $color-white;
-    color: $color-black;
-  }
 }
 </style>

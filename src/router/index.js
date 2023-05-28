@@ -10,27 +10,19 @@ const router = new VueRouter({
   base: import.meta.env.BASE_URL,
   routes: [
     {
-      path: '/designs',
-      name: routeNames.designs.index,
+      path: '/',
+      name: routeNames.home.index,
       component: () => import('@/pages/home/home.page.vue'),
       meta: {
-        theme: 'dark',
+        title: 'Hommme',
       },
     },
     {
-      path: '/designs/:id?',
-      name: routeNames.designs.details,
-      component: () => import('@/pages/home/add-create-design-page/add-create-design.page.vue'),
+      path: '/about',
+      name: routeNames.about.index,
+      component: () => import('@/pages/about/about.page.vue'),
       meta: {
-        theme: 'light',
-      },
-    },
-    {
-      path: '/designs/add',
-      name: routeNames.designs.add,
-      component: () => import('@/pages/home/add-create-design-page/add-create-design.page.vue'),
-      meta: {
-        theme: 'light',
+        title: 'About Us',
       },
     },
     {
@@ -38,7 +30,7 @@ const router = new VueRouter({
       name: routeNames.notFound.index,
       component: () => import('@/pages/not-found/not-found.page.vue'),
       meta: {
-        theme: 'light',
+        title: 'Not Found',
       },
     },
   ],

@@ -27,7 +27,7 @@
 </p>
 
 <p align='center'>
-  <b>Vite4</b> + <b>Vue2</b> + <b>JavaScript</b> + <b>Vue Router</b> + <b>Vuex</b> + <b>Less</b> + <b>Axios</b> + <b>ESLint + Stylelint + Prettier</b>
+  <b>Vite4</b> + <b>Vue2</b> + <b>JavaScript</b> + <b>Vue Router</b> + <b>Vuex</b> + <b>SCSS</b> + <b>Axios</b> + <b>ESLint + Stylelint + Prettier</b>
 </p>
 
 <p align='center'>
@@ -40,7 +40,7 @@
 + 🖖 [Vue 2.7](https://github.com/vuejs/vue) - Composition API and `<script setup>`
 + 🚦 [Vue Router](https://github.com/vuejs/vue-router) - The official router for Vue.js.
 + 📦 [Vuex](https://github.com/vuejs/vuex) - A a state management pattern + library
-+ 🎨 [Less](https://github.com/less/less.js) - It's CSS, with just a little more
++ 🎨 [SCSS](https://sass-lang.com/) - It's CSS, with just a little more
 + 🔗 [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 + 🧰 [Husky](https://typicode.github.io/husky/#/) + [Lint-Staged](https://github.com/okonet/lint-staged) - Git Hook Tools
 + 🛡️ [EditorConfig](http://editorconfig.org) + [ESLint](http://eslint.org) + [Prettier](https://prettier.io) + [Stylelint](https://stylelint.io) + [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#translation) - Code Standards

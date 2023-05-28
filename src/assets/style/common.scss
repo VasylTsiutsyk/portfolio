@@ -1,5 +1,4 @@
 // ========== GLOBAL STYLES ========== //
-
 html {
   font-size: px($browser-context);
 
@@ -9,12 +8,10 @@ html {
 }
 
 body {
-  padding-left: $sidebar-width;
   font-family: $font-family-primary;
   font-size: $font-size-primary;
   font-weight: $font-weight-primary;
   line-height: $body-line-height;
-  color: $color-white;
 
   &::-webkit-scrollbar {
     width: 0.5rem;
@@ -61,7 +58,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: px($container);
-  padding: 0 px(3.2 * $mar);
+  padding: 0 px($mar);
 
   &--lg {
     max-width: px($container-lg);
