@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/ElanYoung/vite-vue2-js-template-starter" target="_blank">Vite 4 🚀 - Vue 2  Starter Template</a>
+  <a href="https://github.com/VasylTsiutsyk/vite-vue2-starterpack" target="_blank">Vite 4 🚀 - Vue 2  Starter Template</a>
 </h1>
 
 <p align="center">
@@ -80,7 +80,7 @@ If you prefer to do it manually with the cleaner git history
 git config --global core.autocrlf input
 
 # clone repository
-git clone https://github.com/ElanYoung/vite-vue2-js-starter-template
+git clone https://github.com/VasylTsiutsyk/vite-vue2-starterpack
 
 # open folder vite-vue2-js-starter-template
 cd vite-vue2-js-starter-template
