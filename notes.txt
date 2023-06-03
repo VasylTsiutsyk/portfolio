@@ -1,0 +1,4 @@
+// Git
+git add .
+git commit -m "[feat/fix/docs/style/refactor/perf/test/build/ci/revert/chore]: commit message"
+git push

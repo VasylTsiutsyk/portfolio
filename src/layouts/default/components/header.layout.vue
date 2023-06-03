@@ -60,10 +60,38 @@ export default {
       routeNames,
     };
   },
+  mounted() {
+    this.scrollHandler();
+  },
   methods: {
     handleBurgerClick() {
       this.isActive = !this.isActive;
       this.$emit('burger-clicked', this.isActive);
+    },
+    toggleBurger() {
+      this.isActive = !this.isActive;
+    },
+    scrollHandler() {
+      let prevScrollPos = window.pageYOffset;
+      const { header } = this.$refs;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollPos = window.pageYOffset;
+
+        if (prevScrollPos > currentScrollPos) {
+          header.classList.remove('_hidden');
+        } else {
+          header.classList.add('_hidden');
+        }
+
+        if (currentScrollPos > 0) {
+          header.classList.add('_scrolled');
+        } else {
+          header.classList.remove('_scrolled');
+        }
+
+        prevScrollPos = currentScrollPos;
+      });
     },
   },
 };

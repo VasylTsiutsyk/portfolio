@@ -457,7 +457,7 @@ module.exports = {
     ],
     'no-descending-specificity': null,
     'no-empty-source': true,
-    'font-family-no-missing-generic-family-keyword': true,
+    'font-family-no-missing-generic-family-keyword': null,
     'at-rule-no-unknown': [
       true,
       {
@@ -472,6 +472,8 @@ module.exports = {
           'each',
           'include',
           'mixin',
+          'else',
+          'warn',
         ],
       },
     ],
