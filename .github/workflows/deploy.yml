@@ -33,6 +33,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          lfs: true
           folder: dist
           token: ${{ secrets.VITE_VUE_DEPLOY }}
           branch: gh-pages
