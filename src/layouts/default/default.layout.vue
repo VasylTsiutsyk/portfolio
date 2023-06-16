@@ -1,25 +1,15 @@
 <template>
   <div class="main-layout">
-    <v-header @burger-clicked="handleBurgerClicked" />
-
     <div class="main-layout__content">
       <router-view />
     </div>
-
-    <v-footer />
   </div>
 </template>
 
 <script>
-import Header from './components/header.layout.vue';
-import Footer from './components/footer.layout.vue';
-
 export default {
   name: 'DefaultLayout',
-  components: {
-    VHeader: Header,
-    VFooter: Footer,
-  },
+  components: {},
   data() {
     return {
       isHeaderBurgerActive: false,

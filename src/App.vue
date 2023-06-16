@@ -12,7 +12,7 @@ export default {
   metaInfo() {
     return {
       title: this.pageTitle,
-      titleTemplate: '%s - App',
+      titleTemplate: 'Vasyl Tsiutsyk Portfolio',
       htmlAttrs: {
         lang: 'en',
         amp: true,

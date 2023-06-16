@@ -7,7 +7,9 @@
     @media (max-width: ($breakpoint-value - 1)) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
@@ -19,7 +21,9 @@
     @media (min-width: $breakpoint-value) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
@@ -51,14 +55,14 @@
 // ===== TEXT ===== //
 @mixin ellipsis {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @mixin multi-ellipsis($lines) {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: $lines;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
 }

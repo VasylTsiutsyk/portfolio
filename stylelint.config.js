@@ -474,6 +474,8 @@ module.exports = {
           'mixin',
           'else',
           'warn',
+          'for',
+          'return',
         ],
       },
     ],
