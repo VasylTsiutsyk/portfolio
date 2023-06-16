@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import HomePage from '@/pages/home/home.page.vue';
 
 import { routeNames } from '@/constants';
 
@@ -10,23 +11,15 @@ const router = new VueRouter({
   base: import.meta.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '*',
       name: routeNames.home.index,
-      component: () => import('@/pages/home/home.page.vue'),
+      component: HomePage,
       meta: {
         title: 'Hommme',
       },
     },
     {
-      path: '/about',
-      name: routeNames.about.index,
-      component: () => import('@/pages/about/about.page.vue'),
-      meta: {
-        title: 'About Us',
-      },
-    },
-    {
-      path: '*',
+      path: '/404',
       name: routeNames.notFound.index,
       component: () => import('@/pages/not-found/not-found.page.vue'),
       meta: {
