@@ -28,7 +28,7 @@ module.exports = {
       confirmCommit: '是否提交或修改commit ?',
     },
     types: [
-      { value: 'feat', name: 'feat:     新增功能 | A new feature' },
+      { value: 'feat', name: 'feat: A new feature' },
       { value: 'fix', name: 'fix:      修复缺陷 | A bug fix' },
       { value: 'docs', name: 'docs:     文档更新 | Documentation only changes' },
       { value: 'style', name: 'style:    代码格式 | Changes that do not affect the meaning of the code' },
