@@ -41,12 +41,10 @@
 </template>
 
 <script>
-import { scrollManager } from '@/mixins';
 import { routeNames } from '@/constants';
 
 export default {
   name: 'HeaderLayout',
-  mixins: [scrollManager],
   data() {
     return {
       isActive: false,
@@ -107,9 +105,12 @@ export default {
       window.addEventListener('scroll', this.scrollListener);
     },
     handleScrollLinkClick(event) {
+      console.log(event);
       event.preventDefault();
       const targetDataAttr = event.target.getAttribute('data-scroll-to');
       const target = document.querySelector(`[data-scroll-target="${targetDataAttr}"]`);
+
+      console.log(target);
 
       if (target) {
         window.scrollTo({

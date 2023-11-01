@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import PinkPalaceImg from '@/assets/images/pinkpalace.jpg';
 import FichaImg from '@/assets/images/ficha.jpg';
 import CasinoImg from '@/assets/images/casino.jpg';
 import PlayTooImg from '@/assets/images/playtoo.jpg';
@@ -56,6 +55,8 @@ import RefinableImg from '@/assets/images/refinable.jpg';
 import AnroImg from '@/assets/images/anro.jpg';
 import CntxtImg from '@/assets/images/cntxt.jpg';
 import WearImg from '@/assets/images/made-to-wear.jpg';
+import FinancialCertaintyImg from '@/assets/images/financial-certainty.jpg';
+import MaxMagicImg from '@/assets/images/max-magic.jpg';
 
 export default {
   name: 'WorksSection',
@@ -84,6 +85,7 @@ export default {
           src: FichaImg,
           alt: 'Screenshot of home page "Ficha"',
           techs: ['html5', 'css3/scss/bem', 'adaptive design', 'js/es6/swiper.js/dark theme'],
+          year: 2023,
         },
         {
           title: 'Casino',
@@ -91,6 +93,23 @@ export default {
           src: CasinoImg,
           alt: 'Screenshot of home page "Casino"',
           techs: ['html5', 'css3/scss/bem', 'adaptive design', 'js/es6/aos.js/swiper.js', 'vue.js'],
+          year: 2023,
+        },
+        {
+          title: 'Creating Financial Certainty',
+          ref: 'https://creating-financial-certainty.lime-server.top/',
+          src: FinancialCertaintyImg,
+          alt: 'Screenshot of home page "Creating Financial Certainty"',
+          techs: ['html5', 'css3/scss/bem', 'adaptive design', 'js / ES6+ / aos.js / swiper.js / parallax-scroll'],
+          year: 2023,
+        },
+        {
+          title: 'Max Magic',
+          ref: 'https://maxmagic.lime-server.top/home.html',
+          src: MaxMagicImg,
+          alt: 'Screenshot of home page "Max Magic"',
+          techs: ['html5', 'css3/scss/bem', 'adaptive design', 'JS / ES6+ / aos.js / swiper.js / choices.js'],
+          year: 2023,
         },
         {
           title: 'PlayToo',
@@ -98,6 +117,7 @@ export default {
           src: PlayTooImg,
           alt: 'Screenshot of home page "PlayToo"',
           techs: ['html5', 'css3/scss/bem', 'adaptive design', 'js/es6/aos.js/swiper.js', 'vue.js'],
+          year: 2023,
         },
         {
           title: 'App Mobile',
@@ -105,6 +125,7 @@ export default {
           src: AppMobileImg,
           alt: 'Screenshot of home page "App Mobile"',
           techs: ['html5', 'css3/scss/bem', 'adaptive design', 'js/es6/aos.js/swiper.js'],
+          year: 2023,
         },
         {
           title: 'XTZ',
@@ -161,13 +182,6 @@ export default {
           src: AnroImg,
           alt: 'Screenshot of home page "ANRO"',
           techs: ['html/html5', 'css/css3/scss/bem/animate.css', 'adaptive design', 'js/es6/wow.js/swiper.js'],
-        },
-        {
-          title: 'Pinkpalace',
-          ref: 'https://palace.lime-server.top/index.html',
-          src: PinkPalaceImg,
-          alt: 'Screenshot of home page "Pinkpalace"',
-          techs: ['html5', 'css3/scss/bem', 'adaptive design', 'js/es6/wow.js/swiper.js'],
         },
       ],
     };

@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import PinkPalaceImg from '@/assets/images/pinkpalace.jpg';
 import MalibuImg from '@/assets/images/malibu.jpg';
 import MadisonsImg from '@/assets/images/madisons.jpg';
 import LucasImg from '@/assets/images/lucas.jpg';
@@ -51,6 +52,13 @@ export default {
   data() {
     return {
       works: [
+        {
+          title: 'Pinkpalace',
+          ref: 'https://palace.lime-server.top/index.html',
+          src: PinkPalaceImg,
+          alt: 'Screenshot of home page "Pinkpalace"',
+          techs: ['html5', 'css3/scss/bem', 'adaptive design', 'js/es6/wow.js/swiper.js'],
+        },
         {
           title: 'Malibu',
           ref: 'http://malibu.lime-server.top',
