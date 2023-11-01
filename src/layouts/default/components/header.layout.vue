@@ -2,7 +2,7 @@
   <header ref="header" class="header">
     <div class="header__container container">
       <div class="header__wrap">
-        <a href="/" class="header__logo">
+        <a href="/" class="header__logo" data-scroll-to="home">
           <img src="@/assets/images/logo-alt.svg" alt="Vasyl Tsiutsyk" />
         </a>
 
@@ -112,6 +112,7 @@ export default {
       const target = document.querySelector(`[data-scroll-target="${targetDataAttr}"]`);
 
       if (target) {
+        console.log(target);
         window.scrollTo({
           behavior: 'smooth',
           top: target.offsetTop,
@@ -174,6 +175,7 @@ export default {
 
     img {
       display: block;
+      pointer-events: none;
 
       @include respond-below(md) {
         max-width: rem(200);

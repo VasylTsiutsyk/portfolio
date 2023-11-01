@@ -25,9 +25,9 @@
           </div>
         </div>
 
-        <router-link to="/" class="footer__logo">
+        <a href="/" class="footer__logo" data-scroll-to="home">
           <img src="@/assets/images/logo-alt.svg" alt="" />
-        </router-link>
+        </a>
 
         <div class="footer__body">
           <p>Living, learning, & leveling up one day at a time.</p>
@@ -119,6 +119,7 @@ export default {
 
     img {
       display: block;
+      pointer-events: none;
     }
   }
 
