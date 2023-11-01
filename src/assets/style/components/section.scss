@@ -1,29 +1,62 @@
 // ========== Section General ========== //
 .section {
+  &--dark {
+    background-color: $color-primary;
+    color: $color-white;
+
+    .section__title {
+      color: inherit;
+    }
+
+    h2,
+    h3 {
+      color: inherit;
+    }
+  }
+
+  &--about {
+    font-size: rem(18);
+  }
+
   &__wrap {
-    padding: px(60) 0;
+    padding: rem(72) 0;
+
+    @include respond-above(md) {
+      padding: rem(112) 0;
+    }
   }
 
   &__title {
     &:not(:last-child) {
-      margin-bottom: px(20);
+      margin-bottom: rem(24);
     }
   }
 
   &__body {
     &:not(:last-child) {
-      margin-bottom: px(50);
+      margin-bottom: rem(48);
     }
 
     > *:not(:last-child) {
-      margin-bottom: px(20);
+      margin-bottom: rem(16);
+    }
+
+    a {
+      text-decoration: underline;
+      color: $color-primary;
+      transition: color $transition-duration-primary;
+
+      @include hover {
+        color: darken($color-primary, 20%);
+      }
     }
   }
 
   &__btn-box {
     display: flex;
     flex-wrap: wrap;
-    gap: px(10);
+    justify-content: center;
+    gap: rem(10);
   }
 }
 

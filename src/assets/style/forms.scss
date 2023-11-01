@@ -1,28 +1,32 @@
 // ========== BUTTONS ========== //
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   outline: none;
-  border: rem(1) solid $color-blue-dark;
-  border-radius: rem(3);
-  padding: rem(7) rem(10);
-  background-color: $color-blue;
-  font-size: rem(14);
-  font-weight: 400;
+  border: rem(2) solid $color-primary;
+  border-radius: rem(28);
+  padding: rem(12) rem(32);
+  background-color: $color-primary;
+  font-size: rem(18);
+  font-weight: 500;
   line-height: 1.4285;
   white-space: nowrap;
   text-align: center;
   color: $color-white;
   cursor: pointer;
   transition: $transition-primary;
+  gap: rem(8);
 
   @include hover {
     background-color: transparent;
-    color: $color-blue;
+    color: $color-primary;
   }
 
   &:focus,
   &:active {
     background-color: transparent;
-    color: $color-blue;
+    color: $color-primary;
   }
 
   &--delete {
@@ -42,6 +46,58 @@
       background-color: $color-red;
       color: $color-white;
     }
+  }
+
+  &--green {
+    border-color: $color-green-bright;
+    background-color: transparent;
+
+    @include hover {
+      background-color: $color-green-bright;
+      color: $color-dark;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $color-green-bright;
+      color: $color-dark;
+    }
+  }
+
+  &--animate {
+    animation: btn-pulse 2s infinite;
+
+    .btn:hover,
+    .btn:focus {
+      box-shadow: 0 0 0 rem(16) transparent;
+      animation: btn-pulse 1s;
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $color-primary;
+
+    @include hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+
+    &:focus,
+    &:active {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}
+
+@keyframes btn-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($color-primary, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rem(16) transparent;
   }
 }
 

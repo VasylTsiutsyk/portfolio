@@ -1,44 +1,37 @@
 <template>
-  <header class="header">
+  <header ref="header" class="header">
     <div class="header__container container">
       <div class="header__wrap">
-        <router-link :to="{ name: routeNames.home.index }" class="header__logo">
-          <img src="@/assets/images/logo.svg" alt="" />
-        </router-link>
+        <a href="/" class="header__logo">
+          <img src="@/assets/images/logo-alt.svg" alt="Vasyl Tsiutsyk" />
+        </a>
 
         <div class="header__menu menu">
-          <nav class="menu__body">
+          <nav class="menu__body" :class="{ _active: isActive }" data-menu>
             <ul>
               <li>
-                <router-link :to="{ name: routeNames.home.index }">Home</router-link>
+                <a href="/" data-scroll-to="home">Home</a>
               </li>
-
               <li>
-                <router-link :to="{ name: routeNames.about.index }">About Us</router-link>
+                <a href="/#about" data-scroll-to="about">About</a>
               </li>
-
               <li>
-                <a href="#">Item</a>
-
-                <span class="menu__arrow"></span>
-
-                <ul class="menu__sublist">
-                  <li>
-                    <a href="#">Item</a>
-                  </li>
-                  <li>
-                    <a href="#">Item</a>
-                  </li>
-                </ul>
+                <a href="/#projects" data-scroll-to="projects">Projects</a>
+              </li>
+              <li>
+                <a href="/#contact" data-scroll-to="contact">Contact</a>
               </li>
             </ul>
-
-            <div class="menu__btn-box">
-              <a href="#" class="btn">Button</a>
-            </div>
           </nav>
 
-          <button class="menu__btn" data-burger aria-label="open menu" title="menu">
+          <button
+            class="menu__btn"
+            :class="{ _active: isActive }"
+            data-burger
+            aria-label="open menu"
+            title="menu"
+            @click="handleBurgerClick"
+          >
             <span aria-hidden></span>
           </button>
         </div>
@@ -58,10 +51,28 @@ export default {
     return {
       isActive: false,
       routeNames,
+      scrollListener: null,
+      scrollLinks: null,
     };
   },
   mounted() {
     this.scrollHandler();
+
+    this.scrollLinks = document.querySelectorAll('[data-scroll-to]');
+    if (this.scrollLinks) {
+      this.scrollLinks.forEach((link) => {
+        link.addEventListener('click', this.handleScrollLinkClick);
+      });
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.scrollListener);
+
+    if (this.scrollLinks) {
+      this.scrollLinks.forEach((link) => {
+        link.removeEventListener('click', this.handleScrollLinkClick);
+      });
+    }
   },
   methods: {
     handleBurgerClick() {
@@ -75,7 +86,7 @@ export default {
       let prevScrollPos = window.pageYOffset;
       const { header } = this.$refs;
 
-      window.addEventListener('scroll', () => {
+      this.scrollListener = () => {
         const currentScrollPos = window.pageYOffset;
 
         if (prevScrollPos > currentScrollPos) {
@@ -91,7 +102,21 @@ export default {
         }
 
         prevScrollPos = currentScrollPos;
-      });
+      };
+
+      window.addEventListener('scroll', this.scrollListener);
+    },
+    handleScrollLinkClick(event) {
+      event.preventDefault();
+      const targetDataAttr = event.target.getAttribute('data-scroll-to');
+      const target = document.querySelector(`[data-scroll-target="${targetDataAttr}"]`);
+
+      if (target) {
+        window.scrollTo({
+          behavior: 'smooth',
+          top: target.offsetTop,
+        });
+      }
     },
   },
 };
@@ -105,18 +130,18 @@ export default {
 
 // ========== HEADER ========== //
 .header {
+  position: fixed;
   z-index: 100;
   left: 0;
-
-  // position: fixed;
   top: 0;
   border-bottom: px(1) solid transparent;
   width: 100%;
   background-color: transparent;
-  transition: border $transition-duration-primary;
+  transition: background-color $transition-duration-primary, box-shadow $transition-duration-primary;
 
-  &--scrolled {
-    border-color: $color-black;
+  &._scrolled {
+    background-color: $color-white;
+    box-shadow: 0 0 2rem rgba($color-primary, 0.25);
   }
 
   &__wrap {
@@ -125,18 +150,17 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: px(70);
-    padding: px(20) 0;
+    padding: rem(14) 0;
     transition: $transition-primary;
 
     @include respond-below(md) {
       min-height: 50px;
-      padding: 10px 0;
+      padding: rem(12) 0;
     }
   }
 
   &__logo {
-    margin-right: px(30);
+    margin-right: rem(24);
     transition: opacity $transition-duration-primary;
 
     @include hover {
@@ -149,7 +173,11 @@ export default {
     }
 
     img {
-      line-height: 1;
+      display: block;
+
+      @include respond-below(md) {
+        max-width: rem(200);
+      }
     }
   }
 
@@ -193,7 +221,7 @@ export default {
       background-color: rgba($color-white, 0.95);
       transition: left 0.5s;
 
-      &.active {
+      &._active {
         left: 0;
       }
     }
@@ -202,7 +230,7 @@ export default {
       @include respond-above(md) {
         display: flex;
         align-items: center;
-        margin: px(-10);
+        margin: rem(-8) rem(-16);
       }
 
       > li {
@@ -210,7 +238,7 @@ export default {
         white-space: nowrap;
 
         @include respond-above(md) {
-          margin: px(10);
+          margin: rem(8) rem(16);
         }
 
         &:not(:last-child) {
@@ -220,16 +248,13 @@ export default {
         }
 
         > a {
-          padding: px(10) px(5);
+          padding: rem(8) rem(4);
+          font-size: rem(18);
           text-transform: capitalize;
           transition: $transition-primary;
 
-          @include respond-below(lg) {
-            font-size: 15px;
-          }
-
           @include respond-below(md) {
-            font-size: 20px;
+            font-size: rem(24);
           }
 
           @include hover {
@@ -283,8 +308,8 @@ export default {
       z-index: 100;
       display: block;
       border: none;
-      width: 30px;
-      height: 18px;
+      width: rem(42);
+      height: rem(26);
       background-color: transparent;
       cursor: pointer;
 
@@ -293,9 +318,10 @@ export default {
       &::after {
         position: absolute;
         left: 0;
+        border-radius: rem(2);
         width: 100%;
-        height: 10%;
-        background-color: $color-black;
+        height: rem(3);
+        background-color: $color-primary;
         transition: $transition-primary;
       }
 
@@ -312,7 +338,7 @@ export default {
         bottom: 0;
       }
 
-      &.active {
+      &._active {
         &::before {
           top: 50%;
           transform: rotate(-45deg) translate(0, -50%);

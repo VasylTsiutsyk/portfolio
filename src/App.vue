@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import Lenis from '@studio-freight/lenis';
 import DefaultLayout from '@/layouts/default/default.layout.vue';
 
 export default {
@@ -26,6 +27,20 @@ export default {
     pageTitle() {
       return this.$route.meta.title || 'Title';
     },
+  },
+  mounted() {
+    const lenis = new Lenis({
+      duration: 1.2,
+      lerp: 0.1,
+      smoothWheel: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   },
 };
 </script>

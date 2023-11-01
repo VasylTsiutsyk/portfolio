@@ -2,39 +2,37 @@
 @import '@/assets/style/base/mixins';
 @import '@/assets/style/base/functions';
 
-.swiper {
-  .swiper-wrapper {
-    padding-bottom: 3.5rem;
-  }
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: rem(-12);
 
-  .swiper-slide {
-    text-align: center;
-  }
-}
-
-.works {
-  &__link-box {
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    width: 72%;
-    text-align: center;
+  > li {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: rem(12);
 
     @include respond-below(md) {
-      width: 70%;
-    }
-
-    @include respond-below(sm) {
-      width: 80%;
+      flex: 0 0 50%;
+      max-width: 50%;
     }
 
     @include respond-below(xs) {
-      width: 90%;
+      flex: 0 0 100%;
+      max-width: 100%;
     }
+  }
+}
+
+.work-card {
+  &__link-box {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
 
     @include hover {
-      .works__details {
-        background-color: rgba($color-base, 0.8);
+      .work-card__details {
+        background-color: rgba($color-dark, 0.95);
         opacity: 1;
         transform: translateY(0);
       }
@@ -42,10 +40,12 @@
 
     > a {
       display: block;
-      height: calc(100vh - 15rem);
+      padding-bottom: 48%;
 
       > img {
-        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -55,18 +55,16 @@
   }
 
   &__title {
-    margin-bottom: calc(20 / 1920 * 100vw);
-    font-size: rem(28);
+    overflow: hidden;
+    margin-bottom: rem(4);
+    font-size: rem(24);
     font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-transform: uppercase;
-    color: $color-light;
-
-    @include respond-below(md) {
-      font-size: rem(24);
-    }
 
     @include respond-below(sm) {
-      font-size: rem(20);
+      font-size: rem(18);
     }
   }
 
@@ -77,26 +75,30 @@
     overflow-y: auto;
     width: 100%;
     height: 100%;
-    padding: rem(28) 0;
+    padding: rem(12);
+    font-size: rem(12);
     opacity: 0;
     transform: translateY(100%);
     transition: all 0.5s;
 
     > h3 {
+      margin-bottom: rem(8);
+      font-size: rem(16);
+      text-align: left;
       text-transform: uppercase;
       color: $color-light;
     }
 
     > ul {
-      list-style: disc inside;
-      padding: rem(24) rem(48);
+      list-style: disc outside;
+      padding-left: rem(12);
       text-align: left;
       text-transform: uppercase;
       color: $color-light;
 
       > li {
         &:not(:last-child) {
-          margin-bottom: 0.25rem;
+          margin-bottom: rem(2);
         }
       }
     }
