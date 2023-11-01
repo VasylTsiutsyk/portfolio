@@ -1,10 +1,8 @@
 <template>
-  <div class="main-layout">
+  <div>
     <v-header />
 
-    <div class="main-layout__content">
-      <router-view />
-    </div>
+    <router-view />
 
     <v-footer />
   </div>
@@ -21,14 +19,7 @@ export default {
     VFooter: Footer,
   },
   data() {
-    return {
-      isHeaderBurgerActive: false,
-    };
-  },
-  methods: {
-    handleBurgerClicked(isActive) {
-      this.isHeaderBurgerActive = isActive;
-    },
+    return {};
   },
 };
 </script>

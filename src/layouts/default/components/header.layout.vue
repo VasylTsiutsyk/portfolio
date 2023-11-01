@@ -112,7 +112,6 @@ export default {
       const target = document.querySelector(`[data-scroll-target="${targetDataAttr}"]`);
 
       if (target) {
-        console.log(target);
         window.scrollTo({
           behavior: 'smooth',
           top: target.offsetTop,

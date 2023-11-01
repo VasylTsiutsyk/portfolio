@@ -15,7 +15,7 @@ const router = new VueRouter({
       name: routeNames.home.index,
       component: HomePage,
       meta: {
-        title: 'Hommme',
+        title: 'Home',
       },
     },
     {
