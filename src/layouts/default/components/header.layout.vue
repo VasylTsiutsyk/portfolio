@@ -21,6 +21,9 @@
               <li>
                 <a href="/#contact" data-scroll-to="contact">Contact</a>
               </li>
+              <li>
+                <a href="../../../assets/files/cv.pdf">CV</a>
+              </li>
             </ul>
           </nav>
 
