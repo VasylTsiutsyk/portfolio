@@ -57,12 +57,21 @@ import CntxtImg from '@/assets/images/cntxt.jpg';
 import WearImg from '@/assets/images/made-to-wear.jpg';
 import FinancialCertaintyImg from '@/assets/images/financial-certainty.jpg';
 import MaxMagicImg from '@/assets/images/max-magic.jpg';
+import HealthcareAbroadImg from '@/assets/images/healthcare-abroad.jpg';
 
 export default {
   name: 'WorksSection',
   data() {
     return {
       works: [
+        {
+          title: 'Healthcare Abroad',
+          ref: 'https://healthcare-abroad.lime-server.top/home.html',
+          src: HealthcareAbroadImg,
+          alt: 'Screenshot of home page "Healthcare Abroad"',
+          techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'GSAP / swiper.js / lenis.js / choices.js'],
+          year: 2023,
+        },
         {
           title: 'CNTXT',
           ref: 'https://cntxt.com/',
