@@ -58,6 +58,7 @@ import WearImg from '@/assets/images/made-to-wear.jpg';
 import FinancialCertaintyImg from '@/assets/images/financial-certainty.jpg';
 import MaxMagicImg from '@/assets/images/max-magic.jpg';
 import HealthcareAbroadImg from '@/assets/images/healthcare-abroad.jpg';
+import XStreamImg from '@/assets/images/x-stream.jpg';
 
 export default {
   name: 'WorksSection',
@@ -70,6 +71,14 @@ export default {
           src: HealthcareAbroadImg,
           alt: 'Screenshot of home page "Healthcare Abroad"',
           techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'GSAP / swiper.js / lenis.js / choices.js'],
+          year: 2023,
+        },
+        {
+          title: 'X-Stream',
+          ref: 'https://x-stream.lime-server.top/',
+          src: XStreamImg,
+          alt: 'Screenshot of home page "X-Stream"',
+          techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'parallax', 'swiper.js / aos.js / fancybox'],
           year: 2023,
         },
         {

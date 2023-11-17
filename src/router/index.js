@@ -18,14 +18,6 @@ const router = new VueRouter({
         title: 'Home',
       },
     },
-    {
-      path: '/404',
-      name: routeNames.notFound.index,
-      component: () => import('@/pages/not-found/not-found.page.vue'),
-      meta: {
-        title: 'Not Found',
-      },
-    },
   ],
   scrollBehavior() {
     return { x: 0, y: 0 };
