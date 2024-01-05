@@ -60,6 +60,7 @@ import MaxMagicImg from '@/assets/images/max-magic.jpg';
 import HealthcareAbroadImg from '@/assets/images/healthcare-abroad.jpg';
 import XStreamImg from '@/assets/images/x-stream.jpg';
 import DaraImg from '@/assets/images/dara.jpg';
+import BelleBathRoomsImg from '@/assets/images/bellebathrooms.jpg';
 
 export default {
   name: 'WorksSection',
@@ -72,6 +73,14 @@ export default {
           src: DaraImg,
           alt: 'Screenshot of home page "Dara LP"',
           techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'swiper.js / fancybox.js / aos.js / simpleParallax.js'],
+          year: 2023,
+        },
+        {
+          title: 'BelleBathRooms',
+          ref: 'https://bellebathrooms.lime-server.top/home.html',
+          src: BelleBathRoomsImg,
+          alt: 'Screenshot of home page "BelleBathRooms"',
+          techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'swiper.js / fancybox.js / aos.js'],
           year: 2023,
         },
         {
