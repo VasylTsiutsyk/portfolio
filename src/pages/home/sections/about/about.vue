@@ -4,15 +4,33 @@
       <div class="section__wrap">
         <h2 class="section__title text-center">About</h2>
 
-        <div class="row justify-content-center">
-          <div class="col-md-8 mb-4">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8">
             <div class="section__body">
-              <p><strong>Languages:</strong> Ukrainian - Native, English - Intermediate, Russian - X.</p>
+              <h3>Languages</h3>
 
-              <p>
-                <strong>Soft:</strong> responsibility, communication skills, quick-learning, punctuality, good
-                analytical skills, creative.
-              </p>
+              <ul class="styled-list">
+                <li>Ukrainian - Native</li>
+                <li>English - Intermediate</li>
+                <li>Russian - X</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8">
+            <div class="section__body">
+              <h3>Soft Skills</h3>
+
+              <ul class="styled-list">
+                <li>Responsibility</li>
+                <li>Communication Skills</li>
+                <li>Quick-learning</li>
+                <li>Punctuality</li>
+                <li>Good analytical skills</li>
+                <li>Creative</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -22,7 +40,7 @@
             <div class="section__body">
               <h3>Academic Back</h3>
 
-              <ul>
+              <ul class="styled-list">
                 <li><strong>LPML</strong> - sept 2012 - may 2015</li>
                 <li><strong>LPNU</strong> / Bachelor of Science/Food technology - sept 2015 - may 2019</li>
                 <li><strong>LPNU</strong> / Master of Science/Fermentation and winemaking - sept 2019 - dec 2020</li>
@@ -35,14 +53,14 @@
         <div class="row justify-content-center">
           <div class="col-md-8">
             <div class="section__body">
-              <h3>Skills</h3>
+              <h3>Hard Skills</h3>
 
               <ul class="styled-list">
                 <li>HTML5</li>
-                <li>CSS3, SASS/SCSS, BEM, Bootstap, TailwindCSS</li>
+                <li>CSS3, SASS/SCSS, BEM, Bootstap 4+, TailwindCSS</li>
                 <li>Native JS/ES6+</li>
-                <li>Vue.js/Vuex</li>
-                <li>Gulp, Webpack</li>
+                <li>Vue.js 2/3, Nuxt 3</li>
+                <li>Gulp, Webpack, npm</li>
                 <li>Git, GitHub, GitLab</li>
               </ul>
             </div>

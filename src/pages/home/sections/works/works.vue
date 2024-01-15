@@ -61,6 +61,7 @@ import HealthcareAbroadImg from '@/assets/images/healthcare-abroad.jpg';
 import XStreamImg from '@/assets/images/x-stream.jpg';
 import DaraImg from '@/assets/images/dara.jpg';
 import BelleBathRoomsImg from '@/assets/images/bellebathrooms.jpg';
+import LivingSpaceTilesImg from '@/assets/images/living-space-tiles.jpg';
 
 export default {
   name: 'WorksSection',
@@ -81,6 +82,14 @@ export default {
           src: BelleBathRoomsImg,
           alt: 'Screenshot of home page "BelleBathRooms"',
           techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'swiper.js / fancybox.js / aos.js'],
+          year: 2023,
+        },
+        {
+          title: 'Living Space Tiles',
+          ref: 'https://livingspacetiles.co.uk',
+          src: LivingSpaceTilesImg,
+          alt: 'Screenshot of home page "Living Space Tiles"',
+          techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'swiper.js / aos.js / masonry'],
           year: 2023,
         },
         {

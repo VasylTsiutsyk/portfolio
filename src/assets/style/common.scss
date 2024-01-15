@@ -218,3 +218,10 @@ h6,
 .h6 {
   font-size: 0.75rem;
 }
+
+
+.styled-list {
+  list-style: disc outside;
+  padding-left: rem(20);
+  font-size: rem(16);
+}
