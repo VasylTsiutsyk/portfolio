@@ -2,7 +2,7 @@
   <section data-scroll-target="projects" class="section text-center">
     <div class="section__container container">
       <div class="section__wrap">
-        <h2 class="section__title">My Recent Work</h2>
+        <h2 class="section__title">My Recent Works</h2>
 
         <div class="section__body">
           <p>
@@ -62,6 +62,7 @@ import XStreamImg from '@/assets/images/x-stream.jpg';
 import DaraImg from '@/assets/images/dara.jpg';
 import BelleBathRoomsImg from '@/assets/images/bellebathrooms.jpg';
 import LivingSpaceTilesImg from '@/assets/images/living-space-tiles.jpg';
+import StoicImg from '@/assets/images/stoic.jpg';
 
 export default {
   name: 'WorksSection',
@@ -98,6 +99,14 @@ export default {
           src: HealthcareAbroadImg,
           alt: 'Screenshot of home page "Healthcare Abroad"',
           techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'GSAP / swiper.js / lenis.js / choices.js'],
+          year: 2023,
+        },
+        {
+          title: 'Stoic FX',
+          ref: 'http://stoic-forex.lime-server.top/home.html',
+          src: StoicImg,
+          alt: 'Screenshot of home page "Stoic FX"',
+          techs: ['html5', 'css3 / scss / bem', 'js / es6+', 'parallax', 'swiper.js / aos.js / fancybox'],
           year: 2023,
         },
         {
