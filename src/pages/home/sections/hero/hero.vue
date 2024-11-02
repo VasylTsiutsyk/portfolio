@@ -3,7 +3,7 @@
     <div class="hero__container container">
       <div class="hero__wrap">
         <div class="hero__content">
-          <h1 class="hero__title" data-aos="fade-up">Hey, I'm Vasyl Tsiutsyk</h1>
+          <h1 class="hero__title" data-aos="fade-up">Hey, I'm Vasyl Tsiutsyk!</h1>
 
           <div class="hero__body text-block" data-aos="fade-up" data-aos-delay="200">
             <p>
